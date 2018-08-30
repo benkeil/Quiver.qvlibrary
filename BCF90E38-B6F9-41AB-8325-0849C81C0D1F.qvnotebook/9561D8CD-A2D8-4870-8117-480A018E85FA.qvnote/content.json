@@ -1,0 +1,9 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# Join metrics\n\nYou can use this to add properties from one metric to another one\n\n    container_cpu_load_average_10s * on(pod_name) group_left(application, environment, version) mls_total_request_count{environment=~\"production\", application=~\"mls\"}\n\nIn this case the two metrics `container_cpu_load_average_10s` and `mls_total_request_count` get joined by the property `pod_name` and the properties `application`, `environment`, `version` are added from the right metric to the left one."
+    }
+  ]
+}

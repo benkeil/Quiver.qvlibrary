@@ -1,0 +1,9 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# Documentation\n\nhttps://stedolan.github.io/jq/manual/\n\n## Store values in variables\n\n`kubectl get nodes --all-namespaces -o json | jq '.items[] | .status.addresses as $addresses | $addresses | .[] | select(.type==\"Hostname\").address as $host | $addresses | .[] | select(.type==\"InternalIP\").address as $ip | {host: $host, ip:$ip}'`"
+    }
+  ]
+}

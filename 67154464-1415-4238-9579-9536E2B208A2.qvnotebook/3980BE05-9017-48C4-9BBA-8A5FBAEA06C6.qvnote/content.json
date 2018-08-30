@@ -1,0 +1,9 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "All messages from **today**\n\n    message:\"Decision process started\" AND @timestamp:[now/d TO *]\n\nGet info of indices\n\n    curl elk01.i.sedorz.net:9200/_cat/indices/production.production-mls.mls.logs-6.2.4-2018.05*?bytes=m | sort -rnk9"
+    }
+  ]
+}

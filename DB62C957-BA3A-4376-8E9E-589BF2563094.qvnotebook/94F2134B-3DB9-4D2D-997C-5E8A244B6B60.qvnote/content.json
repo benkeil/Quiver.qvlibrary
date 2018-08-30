@@ -1,0 +1,9 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# Useful links\n\n- [factory pattern](https://travix.io/factory-method-pattern-in-go-2e09b233453e)"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Reindex",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## Create a new index\n\nCreate a new index with an sufix at the end.\n\n    PUT /production.production-mls.mls.logs-6.2.4-2018.05.16-temp\n\nFurhter details: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html\n\n## Reindex the old index\n\nWe assume that we have a template that already has the new correct mappings\n\n    POST _reindex?wait_for_completion=false\n    {\n      \"source\": {\n        \"index\": \"production.production-mls.mls.logs-6.2.4-2018.05.16\"\n      },\n      \"dest\": {\n        \"index\": \"production.production-mls.mls.logs-6.2.4-2018.05.16-temp\"\n      }\n    }\n\n## Check process progess\n\n    GET _tasks?detailed=true&actions=*reindex\n\n## Remove the old index\n\n    DELETE /production.production-mls.mls.logs-6.2.4-2018.05.16\n\n## Give the new index an alias\n\nIn order to use the same index (in index pattern) we give the new index an alias with the name of the old index.\n\n    POST /_aliases\n    {\n        \"actions\" : [\n            { \"add\" : { \"index\" : \"production.production-mls.mls.logs-6.2.4-2018.05.16-temp\", \"alias\" : \"production.production-mls.mls.logs-6.2.4-2018.05.16\" } }\n        ]\n    }"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Basics",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## std\n\nstdout: `/proc/1/fd/1`\nstderr: `/proc/1/fd/2`"
+    },
+    {
+      "type": "markdown",
+      "data": ""
+    },
+    {
+      "type": "markdown",
+      "data": ""
+    }
+  ]
+}

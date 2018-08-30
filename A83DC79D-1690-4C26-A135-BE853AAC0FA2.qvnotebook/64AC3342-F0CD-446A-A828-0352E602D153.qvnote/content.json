@@ -1,0 +1,9 @@
+{
+  "title": "fluentd.conf",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "**Using environment variables**\n\n`\"#{ENV['YOUR_ENV_VARIABLE']}\"`"
+    }
+  ]
+}

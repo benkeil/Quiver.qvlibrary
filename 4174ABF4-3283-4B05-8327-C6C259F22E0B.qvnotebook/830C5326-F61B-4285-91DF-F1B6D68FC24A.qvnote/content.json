@@ -1,0 +1,9 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "* Get container id from within container\n\n  `cat /proc/self/cgroup | head -n 1 | cut -d '/' -f5`\n\n"
+    }
+  ]
+}

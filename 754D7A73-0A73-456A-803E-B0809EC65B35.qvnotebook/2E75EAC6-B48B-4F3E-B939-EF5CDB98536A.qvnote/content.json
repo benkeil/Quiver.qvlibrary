@@ -1,0 +1,9 @@
+{
+  "title": "Basics",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# Submodules\n\nThe 2nd is if the directory already exists\n```\ngit submodule update\ngit submodule update --init --recursive\n``` "
+    }
+  ]
+}

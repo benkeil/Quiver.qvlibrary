@@ -1,0 +1,9 @@
+{
+  "title": "Config",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## get config as json\n\n`kubectl config view -o \"json\"`\n\n## get user for context\n\n`kubectl config view -o \"jsonpath={$.contexts[?(@.name == 'core')].context.user}\"`\n\n## get token for user\n\n`kubectl config view -o \"jsonpath={$.users[?(@.name == 'kubernetes-admin@k8s-core.i.sedorz.net')].user.token}\"`\n\n## get token for context\n\n`kubectl config view -o \"jsonpath={$.users[?(@.name == '$(kubectl config view -o \"jsonpath={$.contexts[?(@.name == 'integration')].context.user}\")')].user.token}\"`"
+    }
+  ]
+}

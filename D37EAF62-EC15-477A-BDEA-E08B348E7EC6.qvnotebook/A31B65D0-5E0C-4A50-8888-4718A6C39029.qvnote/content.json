@@ -1,0 +1,15 @@
+{
+  "title": "Delete images",
+  "cells": [
+    {
+      "type": "code",
+      "language": "groovy",
+      "data": "curls https://dockerhub.i.sedorz.net/v2/_catalog | jq\ncurls https://dockerhub.i.sedorz.net/v2/products/mls/php/tags/list | jq\ncurl -s -I -H \"Accept: application/vnd.docker.distribution.manifest.v2+json\" https://dockerhub.i.sedorz.net/v2/products/mls/php/manifests/feature_datacenter_move-ab53138 | grep --ignore-case \"docker-content-digest\" | awk '{print $2}'\ncurl -s -XDELETE -H \"Accept: application/vnd.docker.distribution.manifest.v2+json\" https://dockerhub.i.sedorz.net/v2/docker-common/composer/manifests/{DIGEST}"
+    },
+    {
+      "type": "code",
+      "language": "groovy",
+      "data": "#!/bin/bash\n\nimage=$1\nnewestTag=$2\n\nfor tag in $(curl -s https://dockerhub.i.sedorz.net/v2/${image}/tags/list | jq -r '.tags[]' 2>/dev/null | egrep -v \"(latest|${newestTag})\"); do\n    echo \"delete tag: ${tag}\"\n    digest=$(curl -s -I -H 'Accept: application/vnd.docker.distribution.manifest.v2+json' https://dockerhub.i.sedorz.net/v2/${image}/manifests/${tag} | grep --ignore-case 'docker-content-digest' | awk '{print $2}')\n    echo \"digest: ${digest}\"\n    url=\"https://dockerhub.i.sedorz.net/v2/${image}/manifests/${digest}\"\n    url=${url%$'\\r'}\n    curl -XDELETE -H \"Accept: application/vnd.docker.distribution.manifest.v2+json\" ${url}\ndone"
+    }
+  ]
+}

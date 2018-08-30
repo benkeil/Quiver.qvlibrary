@@ -1,0 +1,9 @@
+{
+  "title": "Known Issues",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "- Can't pull image\n\n  **Error:** `failed to register layer: Error processing tar file(exit status 1): operation not supported`\n\n  **Solution:** `minikube start --docker-opt storage-driver=overlay`\n"
+    }
+  ]
+}

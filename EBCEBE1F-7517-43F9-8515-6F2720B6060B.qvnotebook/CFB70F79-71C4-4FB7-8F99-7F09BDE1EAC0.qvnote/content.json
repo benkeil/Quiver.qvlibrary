@@ -1,0 +1,9 @@
+{
+  "title": "Job DSL",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "**Manipulate current build**\n\n```groovy\nimport hudson.model.*\n\n//get current build\ndef build = Thread.currentThread().executable\n\n// grafana url for aggregate dashboard - replace time stamp with %s\ndef perfResult = \"http://10.11.12.13:3000/dashboard/db/run-time-aggregate?from=%s&to=%s\"\ndef jmxMonitor = \"http://10.11.12.13:3000/dashboard/db/jmx-monitor?from=%s&to=%s\"\n\n// get build start and end time\ndef start = build.getStartTimeInMillis();\ndef end = start + build.getExecutor().getElapsedTime();\n\n// replace time\nperfResult = String.format(perfResult, start, end);\njmxMonitor = String.format(jmxMonitor, start, end);\n\n//build the string to be added as description.\ndef link = \"<a href='%s'>%s</a><br/>\";\ndef sb = new StringBuilder();\nsb.append(String.format(link, perfResult, \"Grafana Performance Result\"))\n  .append(String.format(link, jmxMonitor, \"Grafana JMX Result\"));\n\n// set build description\nbuild.setDescription(sb.toString());\n```\n"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## get pod status\n\n```\nkubectl get pods -n integration-services ownership-verification-service-v2-5fdcb646c4-wnjqz -o json | jq '. | {name: .metadata.name, namespace: .metadata.namespace, ready: .statusj.conditions, container: .status.containerStatuses}'\n```\n\n## get status for all pods\n\n```\nkubectl get pods -n integration-services -o json | jq '.items[] | {name: .metadata.name, namespace: .metadata.namespace, ready: .status.conditions, container: .status.containerStatuses}'\n```\n\n## scale pods\n\n```\nkubectl scale --current-replicas=2 --replicas=3 deployment/mls -n production-mls\n```\n\n## start job\n\n```\nkubectl -n production create job --from=cronjob/elasticsearch-curator-job cleanup\n```"
+    },
+    {
+      "type": "markdown",
+      "data": ""
+    }
+  ]
+}

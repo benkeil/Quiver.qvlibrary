@@ -1,0 +1,9 @@
+{
+  "title": "Gitlab plugin",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "**Available variables**\n\n- gitlabBranch\n- gitlabSourceBranch\n- gitlabActionType\n- gitlabUserName\n- gitlabUserEmail\n- gitlabSourceRepoHomepage\n- gitlabSourceRepoName\n- gitlabSourceNamespace\n- gitlabSourceRepoURL\n- gitlabSourceRepoSshUrl\n- gitlabSourceRepoHttpUrl\n- gitlabMergeRequestTitle\n- gitlabMergeRequestDescription\n- gitlabMergeRequestId\n- gitlabMergeRequestIid\n- gitlabMergeRequestState\n- gitlabMergedByUser\n- gitlabMergeRequestAssignee\n- gitlabMergeRequestLastCommit\n- gitlabMergeRequestTargetProjectId\n- gitlabTargetBranch\n- gitlabTargetRepoName\n- gitlabTargetNamespace\n- gitlabTargetRepoSshUrl\n- gitlabTargetRepoHttpUrl\n- gitlabBefore\n- gitlabAfter\n- gitlabTriggerPhrase"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Variables",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "You can define variables to filter in your dashboards.\n\n# Read dynamic properties from metrics\n\n**query**\n\n    query_result(nginx_server_connections{application=~\"$application\"})\n\n**regex**\n\n    /.*environment=\"([^\"]*).*/"
+    }
+  ]
+}

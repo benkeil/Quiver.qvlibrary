@@ -1,0 +1,9 @@
+{
+  "title": "Debugging",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "predefined CheckCommands\n\n`/usr/share/icinga2/include/command-plugins.conf`"
+    }
+  ]
+}

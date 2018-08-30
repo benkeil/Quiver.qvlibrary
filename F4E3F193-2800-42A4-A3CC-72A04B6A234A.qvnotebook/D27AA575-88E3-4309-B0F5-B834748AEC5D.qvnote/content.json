@@ -1,0 +1,9 @@
+{
+  "title": "Cookbook",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## enable error output and reload nginx\n\n```bash\ngrep -r display /usr/local/etc/\nvi /usr/local/etc/php/conf.d/php-ini-overrides.ini\ndisplay_errors=true\nkill -SIGUSR2 1\n```"
+    }
+  ]
+}

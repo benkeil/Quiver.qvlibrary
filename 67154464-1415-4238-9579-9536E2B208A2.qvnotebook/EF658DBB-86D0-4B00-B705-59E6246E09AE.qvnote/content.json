@@ -1,0 +1,9 @@
+{
+  "title": "Useful Links",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "- <https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html>\n- <https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#date-math>"
+    }
+  ]
+}

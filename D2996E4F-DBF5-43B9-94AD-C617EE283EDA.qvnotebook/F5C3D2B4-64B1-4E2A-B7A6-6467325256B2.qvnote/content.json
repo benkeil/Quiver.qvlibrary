@@ -1,0 +1,9 @@
+{
+  "title": "Servicemap",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# Cookbook\n\n**Get complete dependency tree of a service**\n```cypher\nmatch (s:Service{name:\"domainsignup-service-v2\"})-[r:HAS_DEPENDENCY*]->(d) return s, r, d\n```"
+    }
+  ]
+}
