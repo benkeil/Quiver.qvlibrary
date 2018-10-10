@@ -1,0 +1,9 @@
+{
+  "title": "Packages",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "```\n15:53:26 benkeil@m256 ~ $ brew cask list\naerial              cheatsheet          firefox             java                mattermost          nagstamon           real-vnc            skype               sourcetree          sts                 vagrant             visual-studio-code\nbettertouchtool     docker              iterm2              kdiff3              minikube            querious            sequel-pro          slack               spotify             synergy             virtualbox          visualvm\n15:53:33 benkeil@m256 ~ $ brew list\napr\t\t\tdep\t\t\tglib\t\t\tkube-extra\t\tlibpq\t\t\tmaven-completion\topenssl@1.1\t\tpython\t\t\ttelnet\napr-util\t\tdocker-completion\tgmp\t\t\tkubernetes-cli\t\tlibsass\t\t\tmbedtls\t\t\tp11-kit\t\t\tpython@2\t\tthefuck\nargon2\t\t\temacs\t\t\tgnutls\t\t\tkubernetes-helm\t\tlibsodium\t\tmcrypt\t\t\tpayara\t\t\tqcachegrind\t\tudns\nasciidoctor\t\tfontconfig\t\tgo\t\t\tlibev\t\t\tlibtasn1\t\tmemcached\t\tpcre\t\t\tqt\t\t\tunixodbc\naspell\t\t\tfreetds\t\t\tgraphviz\t\tlibevent\t\tlibtiff\t\t\tmhash\t\t\tpcre2\t\t\tre2c\t\t\twatch\nautoconf\t\tfreetype\t\tgroovy\t\t\tlibffi\t\t\tlibtool\t\t\tmysql-client\t\tpharcc\t\t\treadline\t\twebp\nbash-completion\t\tgd\t\t\ticu4c\t\t\tlibiconv\t\tlibunistring\t\tnettle\t\t\tphp\t\t\trename\t\t\twget\nbrew-cask-completion\tgdbm\t\t\tinit-minikube\t\tlibidn2\t\t\tlibxml2\t\t\tnode\t\t\tphp@5.6\t\t\tshyaml\t\t\txz\ncask\t\t\tgettext\t\t\tjmeter\t\t\tlibmemcached\t\tlibyaml\t\t\toniguruma\t\tpkg-config\t\tsiege\ncomposer\t\tgit\t\t\tjpeg\t\t\tlibnet\t\t\tlibzip\t\t\topenldap\t\tproxychains-ng\t\tsqlite\ncoreutils\t\tgit-flow\t\tjq\t\t\tlibpng\t\t\tmaven\t\t\topenssl\t\t\tpup\t\t\ttcptraceroute\n```"
+    }
+  ]
+}
